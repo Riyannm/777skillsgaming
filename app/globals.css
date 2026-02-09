@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  /* Semantic color tokens */
+  --color-primary: #00B4D8;
+  --color-secondary: #F7941D;
+  --color-background: #020617;
+  --color-foreground: #E5E7EB;
+  --color-muted: #0B1220;
+  --color-muted-foreground: #9CA3AF;
+  --color-border: #1E293B;
+  --color-accent: #38BDF8;
+  --color-accent-foreground: #020617;
+  
+  /* Legacy color mappings for backward compatibility */
+  --color-primary-blue: #00B4D8;
+  --color-primary-orange: #F7941D;
+  --color-dark-navy: #020617;
+  --color-accent-cyan: #38BDF8;
+  --color-accent-gold: #FFB703;
+  --color-success-green: #06D6A0;
+  
+  --font-heading: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
+}
+
+:root {
+  --background: #020617;
+  --foreground: #E5E7EB;
+  --muted: #0B1220;
+  --muted-foreground: #9CA3AF;
+  --border: #1E293B;
+  --primary: #00B4D8;
+  --secondary: #F7941D;
+  --accent: #38BDF8;
+  --accent-foreground: #020617;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-space-grotesk), system-ui, sans-serif;
+}
+
+/* Hide scrollbar for webkit browsers */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth horizontal scrolling */
+.scroll-smooth {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Enhanced scroll snap for smoother snapping */
+.snap-x {
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 1rem;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Momentum scrolling for iOS */
+@supports (-webkit-overflow-scrolling: touch) {
+  .scroll-smooth {
+    -webkit-overflow-scrolling: touch;
+  }
+}
