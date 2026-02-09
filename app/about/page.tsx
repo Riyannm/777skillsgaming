@@ -35,7 +35,7 @@ export default function AboutPage() {
             <div className="prose prose-invert max-w-none mb-16">
               <h2 className="text-3xl font-bold text-foreground mb-4">Our Story</h2>
               <p className="text-muted-foreground text-lg mb-6">
-                777 Skills, LLC is a leading provider of licensed skill game machines and comprehensive
+                777 skills (Vending & Delivery LLC ), LLC is a leading provider of licensed skill game machines and comprehensive
                 support services in San Antonio, Texas, and surrounding areas. We specialize in
                 delivering high-quality gaming solutions that help businesses increase revenue while
                 maintaining full compliance with all regulations.
