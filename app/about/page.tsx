@@ -84,19 +84,15 @@ export default function AboutPage() {
           </ScrollReveal>
 
           <ScrollReveal stagger delay={0.1}>
-            <div className="mb-16">
-              <GradientText className="text-3xl font-bold mb-6">Service Areas</GradientText>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {["San Antonio", "New Braunfels", "Converse", "Boerne", "Helotes"].map((city) => (
-                  <ElectricBorder key={city} color="#00B4D8" sparks={false} className="max-w-md">
-                    <div className="p-4 rounded-lg bg-muted hover:shadow-2xl transition-shadow">
-                      <p className="text-foreground font-medium">{city}</p>
-                    </div>
-                  </ElectricBorder>
-                ))}
-              </div>
-            </div>
-          </ScrollReveal>
+  <div className="mb-16 text-center">
+    <GradientText className="text-3xl font-bold mb-6">Service Areas</GradientText>
+    <ElectricBorder color="#00B4D8" sparks={false} className="max-w-lg mx-auto">
+      <div className="p-6 rounded-lg bg-muted hover:shadow-2xl transition-shadow">
+        <p className="text-foreground font-medium text-lg">All Over Texas</p>
+      </div>
+    </ElectricBorder>
+  </div>
+</ScrollReveal>
 
           <ScrollReveal delay={0.4}>
             <div>
