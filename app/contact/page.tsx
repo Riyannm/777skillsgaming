@@ -54,7 +54,7 @@ export default function ContactPage() {
                       <div>
                         <p className="text-muted-foreground text-sm mb-1">Phone</p>
                         <a href="tel:+12105551234" className="text-foreground hover:text-primary transition-colors">
-                          (210) 555-1234
+                          726-777-3595
                         </a>
                       </div>
                     </div>
