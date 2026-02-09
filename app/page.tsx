@@ -15,7 +15,7 @@ const products = [
   {
     title: "43\" Metal Cabinet",
     description: "Durable metal cabinet design perfect for high-traffic locations",
-    image: "placeholder",
+    image: "/products/img5.png",
     features: [
       "43-inch high-definition display",
       "Reinforced metal construction",
@@ -27,7 +27,7 @@ const products = [
   {
     title: "43\" Dual Screen",
     description: "Dual screen setup for enhanced gaming experience",
-    image: "https://via.placeholder.com/400x300/020617/00B4D8?text=43%22+Dual+Screen",
+    image: "/products/img4.png",
     features: [
       "Dual 43-inch displays",
       "Synchronized gameplay",
@@ -39,7 +39,7 @@ const products = [
   {
     title: "43\" Wooden Cabinet",
     description: "Classic wooden cabinet with modern technology",
-    image: "https://via.placeholder.com/400x300/020617/00B4D8?text=43%22+Wooden+Cabinet",
+    image: "/products/img3.png",
     features: [
       "Traditional wood finish",
       "43-inch display",
@@ -51,7 +51,7 @@ const products = [
   {
     title: "32\" Metal Cabinet",
     description: "Compact metal cabinet ideal for smaller spaces",
-    image: "https://via.placeholder.com/400x300/020617/00B4D8?text=32%22+Metal+Cabinet",
+    image: "/products/img2.png",
     features: [
       "32-inch display",
       "Space-efficient design",
@@ -63,7 +63,7 @@ const products = [
   {
     title: "Self-Dispensing KIOSK",
     description: "Automated self-service kiosk solution",
-    image: "https://via.placeholder.com/400x300/020617/00B4D8?text=Self-Dispensing+KIOSK",
+    image: "/products/img2.png",
     features: [
       "Fully automated operation",
       "Touch screen interface",
