@@ -51,7 +51,7 @@ const products = [
   {
     title: "32\" Metal Cabinet",
     description: "Compact metal cabinet ideal for smaller spaces",
-    image: "/products/img2.png",
+    image: "/products/img1.png",
     features: [
       "32-inch display",
       "Space-efficient design",
