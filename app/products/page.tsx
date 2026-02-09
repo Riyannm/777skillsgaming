@@ -15,7 +15,7 @@ const products = [
   {
     title: "43\" Metal Cabinet",
     description: "Durable metal cabinet design perfect for high-traffic locations. Built to last with reinforced construction and secure locking mechanisms.",
-    image: "img1",
+    image: "/products/img1.png",
     features: [
       "43-inch high-definition display",
       "Reinforced metal construction",
