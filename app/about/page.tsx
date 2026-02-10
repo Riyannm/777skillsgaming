@@ -67,7 +67,7 @@ export default function AboutPage() {
               <ElectricBorder color="#F7941D" sparks={false} className="max-w-sm mx-auto">
                 <div className="p-8 rounded-xl bg-muted text-center hover:shadow-2xl transition-shadow">
                   <div className="text-5xl font-bold text-secondary mb-2">
-                    <CountUp end={5} suffix="+" />
+                    <CountUp end={15} suffix="+" />
                   </div>
                   <p className="text-muted-foreground text-lg">Service Areas</p>
                 </div>
