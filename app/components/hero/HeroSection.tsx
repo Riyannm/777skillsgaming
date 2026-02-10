@@ -11,6 +11,13 @@ import ScrollReveal from "../ui/ScrollReveal";
 export default function HeroSection() {
   return (
     <section className="relative h-screen overflow-hidden bg-gradient-to-br from-background via-muted to-background">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+      />
+
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-black/60" />
       <Hyperspeed className="absolute inset-0" />
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
         <ScrollReveal>
