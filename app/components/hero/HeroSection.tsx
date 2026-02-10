@@ -13,7 +13,7 @@ export default function HeroSection() {
     <section className="relative h-screen overflow-hidden bg-gradient-to-br from-background via-muted to-background">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+        style={{ backgroundImage: "url('/bgimg.png')" }}
       />
 
       {/* Dark overlay for readability */}
