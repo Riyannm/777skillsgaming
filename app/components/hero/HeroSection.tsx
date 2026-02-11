@@ -10,7 +10,7 @@ import ScrollReveal from "../ui/ScrollReveal";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen overflow-hidden bg-gradient-to-br from-background via-muted to-background">
+    <section className="relative h-screen overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/bgimg.png')" }}
