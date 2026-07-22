@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Navigation from "./components/ui/Navigation";
-import ElectricButton from "./components/ui/ElectricButton";
 
 export default function NotFound() {
   return (
@@ -14,7 +13,9 @@ export default function NotFound() {
             The page you're looking for doesn't exist or has been moved.
           </p>
           <Link href="/">
-            <ElectricButton>Go Home</ElectricButton>
+            <button className="px-8 py-4 rounded-xl font-bold bg-primary text-background hover:bg-primary/90 transition-all">
+              Go Home
+            </button>
           </Link>
         </div>
       </div>
