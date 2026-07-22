@@ -1,76 +1,198 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
+@custom-variant dark (&:is(.dark *));
+
+/* ─── Tailwind Theme Tokens ───────────────────────── */
 @theme {
-  /* Semantic color tokens */
-  --color-primary: #00B4D8;
-  --color-secondary: #F7941D;
-  --color-background: #020617;
-  --color-foreground: #E5E7EB;
-  --color-muted: #0B1220;
-  --color-muted-foreground: #9CA3AF;
-  --color-border: #1E293B;
-  --color-accent: #38BDF8;
-  --color-accent-foreground: #020617;
-  
-  /* Legacy color mappings for backward compatibility */
-  --color-primary-blue: #00B4D8;
-  --color-primary-orange: #F7941D;
-  --color-dark-navy: #020617;
-  --color-accent-cyan: #38BDF8;
-  --color-accent-gold: #FFB703;
-  --color-success-green: #06D6A0;
-  
+  --color-background:          #020617;
+  --color-foreground:          #E5E7EB;
+  --color-muted:               #0B1220;
+  --color-muted-foreground:    #9CA3AF;
+  --color-border:              #1E293B;
+  --color-primary:             #00B4D8;
+  --color-primary-foreground:  #020617;
+  --color-secondary:           #F7941D;
+  --color-secondary-foreground:#020617;
+  --color-accent:              #38BDF8;
+  --color-accent-foreground:   #020617;
+  --color-gold:                #FFB703;
+  --color-success:             #06D6A0;
+  --color-destructive:         #EF4444;
+  --color-card:                #0B1220;
+  --color-card-foreground:     #E5E7EB;
+  --color-popover:             #0B1220;
+  --color-popover-foreground:  #E5E7EB;
+  --color-input:               #1E293B;
+  --color-ring:                #00B4D8;
+  --radius:                    0.625rem;
+
   --font-heading: var(--font-space-grotesk);
-  --font-body: var(--font-inter);
+  --font-body:    var(--font-inter);
 }
 
+/* ─── shadcn/ui CSS Variables (dark theme) ─────────── */
 :root {
-  --background: #020617;
-  --foreground: #E5E7EB;
-  --muted: #0B1220;
-  --muted-foreground: #9CA3AF;
-  --border: #1E293B;
-  --primary: #00B4D8;
-  --secondary: #F7941D;
-  --accent: #38BDF8;
-  --accent-foreground: #020617;
+  --background:              220 47% 5%;
+  --foreground:              213 27% 84%;
+  --card:                    220 47% 7%;
+  --card-foreground:         213 27% 84%;
+  --popover:                 220 47% 7%;
+  --popover-foreground:      213 27% 84%;
+  --primary:                 195 100% 42%;
+  --primary-foreground:      220 47% 5%;
+  --secondary:               32 92% 54%;
+  --secondary-foreground:    220 47% 5%;
+  --muted:                   220 47% 8%;
+  --muted-foreground:        215 16% 57%;
+  --accent:                  199 89% 48%;
+  --accent-foreground:       220 47% 5%;
+  --destructive:             0 84% 60%;
+  --destructive-foreground:  213 27% 84%;
+  --border:                  217 33% 17%;
+  --input:                   217 33% 17%;
+  --ring:                    195 100% 42%;
+  --radius:                  0.625rem;
+}
+
+/* ─── Base ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: #020617;
+  color: #E5E7EB;
   font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-space-grotesk), system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
-/* Hide scrollbar for webkit browsers */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
+/* ─── Section label overline ────────────────────────── */
+.section-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #00B4D8;
 }
 
-/* Smooth horizontal scrolling */
-.scroll-smooth {
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+/* ─── Scrollbar ─────────────────────────────────────── */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0B1220; }
+::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #00B4D8; }
+
+/* ─── Animations ────────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(0,180,216,0.3); }
+  50%       { box-shadow: 0 0 40px rgba(0,180,216,0.6); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
-/* Enhanced scroll snap for smoother snapping */
-.snap-x {
-  scroll-snap-type: x mandatory;
-  scroll-padding: 0 1rem;
+.animate-shimmer  { animation: shimmer 3s linear infinite; }
+.animate-float    { animation: float 4s ease-in-out infinite; }
+.animate-fade-up  { animation: fade-up 0.6s ease forwards; }
+.animate-glow     { animation: glow-pulse 2s ease-in-out infinite; }
+.animate-marquee  { animation: marquee 30s linear infinite; }
+
+/* ─── Glass card ────────────────────────────────────── */
+.glass {
+  background: rgba(11, 18, 32, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 41, 59, 0.8);
 }
 
-.snap-start {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+/* ─── Shimmer text utilities ────────────────────────── */
+.text-gold-shimmer {
+  background: linear-gradient(90deg, #FFB703 0%, #F7941D 35%, #FFB703 70%, #F7941D 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+.text-cyan-shimmer {
+  background: linear-gradient(90deg, #00B4D8 0%, #38BDF8 35%, #00B4D8 70%, #38BDF8 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
 }
 
-/* Momentum scrolling for iOS */
-@supports (-webkit-overflow-scrolling: touch) {
-  .scroll-smooth {
-    -webkit-overflow-scrolling: touch;
+/* ─── Snap scroll ───────────────────────────────────── */
+.snap-x     { scroll-snap-type: x mandatory; scroll-padding: 0 1rem; }
+.snap-start { scroll-snap-align: start; scroll-snap-stop: always; }
+
+/* ─── Focus visible ─────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #00B4D8;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Animated brand gradient border ────────────────── */
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes border-spin { to { --border-angle: 360deg; } }
+
+.animated-border { position: relative; }
+.animated-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;                 /* border thickness */
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--border-angle),
+    #00B4D8, #38BDF8, #F7941D, #00B4D8
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask-composite: exclude;
+  animation: border-spin 4s linear infinite;
+  pointer-events: none;
+  z-index: 30;   /* above card content/images so the ring frames the whole card */
+}
+
+/* ─── Reduced motion ────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

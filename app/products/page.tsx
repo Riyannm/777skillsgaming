@@ -1,119 +1,118 @@
+import Link from "next/link";
+import Image from "next/image";
 import Navigation from "../components/ui/Navigation";
-import ProductCard from "../components/products/ProductCard";
-import ScrollReveal from "../components/ui/ScrollReveal";
-import GradientText from "../components/ui/GradientText";
-import ShinyText from "../components/ui/ShinyText";
-import Iridescence from "../components/backgrounds/Iridescence";
-import { Metadata } from "next";
+import SpotlightCard from "../components/ui/SpotlightCard";
+import Tilt from "../components/ui/Tilt";
+import { products } from "../lib/products";
+import { ArrowRight } from "lucide-react";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Products - 777 Skills | Skill Game Machines",
-  description: "Browse our selection of licensed skill game machines including 43\" and 32\" cabinets, dual screen setups, and self-dispensing kiosks.",
+  title: "Products",
+  description:
+    "Browse our selection of licensed skill game machines — 43\" metal and wooden cabinets, dual screen setups, and self-dispensing kiosks. Available for San Antonio businesses.",
 };
-
-const products = [
-  {
-    title: "43\" Metal Cabinet",
-    description: "Durable metal cabinet design perfect for high-traffic locations. Built to last with reinforced construction and secure locking mechanisms.",
-    image: "/products/img5.png",
-    features: [
-      "43-inch high-definition display",
-      "Reinforced metal construction",
-      "Secure locking mechanism",
-      "Easy maintenance access",
-      "Energy efficient operation",
-      "Compliant with all regulations",
-    ],
-    href: "/products/43-metal-cabinet",
-  },
-  {
-    title: "43\" Dual Screen",
-    description: "Dual screen setup for enhanced gaming experience. Perfect for locations wanting to maximize player engagement.",
-    image: "/products/img4.png",
-    features: [
-      "Dual 43-inch displays",
-      "Synchronized gameplay",
-      "Premium graphics quality",
-      "Advanced sound system",
-      "Multi-player capability",
-      "High-resolution displays",
-    ],
-    href: "/products/43-dual-screen",
-  },
-  {
-    title: "43\" Wooden Cabinet",
-    description: "Classic wooden cabinet with modern technology. Combines traditional aesthetics with cutting-edge gaming technology.",
-    image: "/products/img3.png",
-    features: [
-      "Traditional wood finish",
-      "43-inch display",
-      "Elegant design",
-      "Durable construction",
-      "Customizable finishes",
-      "Premium materials",
-    ],
-    href: "/products/43-wooden-cabinet",
-  },
-  {
-    title: "32\" Metal Cabinet",
-    description: "Compact metal cabinet ideal for smaller spaces. Full features in a space-efficient design.",
-    image: "/products/img1.png",
-    features: [
-      "32-inch display",
-      "Space-efficient design",
-      "Full feature set",
-      "Affordable pricing",
-      "Easy installation",
-      "Low maintenance",
-    ],
-    href: "/products/32-metal-cabinet",
-  },
-  {
-    title: "Self-Dispensing KIOSK",
-    description: "Automated self-service kiosk solution. Fully automated operation with secure payment processing.",
-    image: "/products/img2.png",
-    features: [
-      "Fully automated operation",
-      "Touch screen interface",
-      "Secure payment processing",
-      "24/7 operation capability",
-      "Remote monitoring",
-      "Cashless payment options",
-    ],
-    href: "/products/self-dispensing-kiosk",
-  },
-];
 
 export default function ProductsPage() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      <Iridescence />
-      
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">
-        <div className="container mx-auto">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <ShinyText className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">
-                Our Products
-              </ShinyText>
-              <GradientText className="text-5xl md:text-6xl font-bold mb-6 max-w-2xl mx-auto line-clamp-2">
-                Skill Game Machines
-              </GradientText>
-              <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-                Premium quality skill game machines designed for maximum performance, reliability, and compliance.
-                All our machines are fully licensed and meet the highest industry standards.
-              </p>
-            </div>
-          </ScrollReveal>
 
-          <ScrollReveal stagger delay={0.1}>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {products.map((product) => (
-                <ProductCard key={product.title} {...product} />
-              ))}
-            </div>
-          </ScrollReveal>
+      {/* Header */}
+      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 border-b border-border relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent pointer-events-none" />
+        <div className="container mx-auto relative">
+          <p className="section-label mb-3">Our Machines</p>
+          <h1 className="text-5xl md:text-6xl font-black text-foreground mb-4 tracking-tight">
+            Skill Game Machines
+          </h1>
+          <p className="text-muted-foreground text-lg max-w-2xl">
+            Every machine is licensed, installed, and supported by our team. We handle
+            compliance — you handle growth.
+          </p>
+        </div>
+      </section>
+
+      {/* Products Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {products.map((product) => (
+              <Link
+                key={product.slug}
+                href={`/products/${product.slug}`}
+                className="group block h-full"
+              >
+                <Tilt className="h-full">
+                  <SpotlightCard animatedBorder className="h-full overflow-hidden transition-colors duration-300">
+                    {/* Badge */}
+                    {product.badge && (
+                      <span className="absolute top-3 right-3 z-20 px-2.5 py-1 rounded-full text-xs font-semibold bg-secondary text-background shadow-lg shadow-secondary/20">
+                        {product.badge}
+                      </span>
+                    )}
+
+                    <div className="relative z-10 flex h-full flex-col">
+                      {/* Image */}
+                      <div className="relative aspect-[4/3] bg-gradient-to-br from-muted to-background overflow-hidden">
+                        <Image
+                          src={product.image}
+                          alt={product.title}
+                          fill
+                          className="object-contain p-6 group-hover:scale-105 transition-transform duration-500"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      </div>
+
+                      {/* Content */}
+                      <div className="p-6">
+                        <h2 className="font-bold text-foreground text-xl mb-2 group-hover:text-primary transition-colors">
+                          {product.title}
+                        </h2>
+                        <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-2">
+                          {product.shortDescription}
+                        </p>
+
+                        {/* Specs chips */}
+                        <div className="flex flex-wrap gap-1.5 mb-5">
+                          {product.specs.slice(0, 3).map((spec) => (
+                            <span
+                              key={spec.label}
+                              className="px-2.5 py-1 rounded-md bg-muted border border-border text-xs text-muted-foreground"
+                            >
+                              {spec.label}: <span className="text-foreground font-medium">{spec.value}</span>
+                            </span>
+                          ))}
+                        </div>
+
+                        <span className="inline-flex items-center gap-1.5 text-sm text-primary font-semibold group-hover:gap-2.5 transition-all duration-200">
+                          View Details
+                          <ArrowRight className="w-4 h-4" />
+                        </span>
+                      </div>
+                    </div>
+                  </SpotlightCard>
+                </Tilt>
+              </Link>
+            ))}
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="mt-20 text-center py-12 px-6 rounded-2xl border border-dashed border-primary/30 bg-primary/5">
+            <p className="section-label mb-3">Interested?</p>
+            <h3 className="text-3xl font-black text-foreground mb-3">
+              Not sure which machine fits your location?
+            </h3>
+            <p className="text-muted-foreground mb-8 max-w-md mx-auto">
+              We'll assess your space and recommend the best setup — completely free.
+            </p>
+            <Link href="/contact">
+              <button className="group inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold bg-primary text-background hover:bg-primary/90 transition-all hover:shadow-lg hover:shadow-primary/25 active:scale-95">
+                Get a Free Recommendation
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </Link>
+          </div>
         </div>
       </section>
     </main>
