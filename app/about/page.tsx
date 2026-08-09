@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about 777 Skills, LLC — San Antonio's trusted provider of licensed skill game machines and support services across Texas.",
+    "Learn about 777 Skills, a brand of Vending & Delivery LLC — San Antonio's trusted provider of licensed skill game machines and support services across Texas.",
 };
 
 const stats = [
@@ -72,7 +72,7 @@ export default function AboutPage() {
             <span className="text-cyan-shimmer">Skill Game Partner</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
-            777 Skills (Vending &amp; Delivery LLC) is a leading provider of licensed skill
+            777 Skills, a brand of Vending &amp; Delivery LLC, is a leading provider of licensed skill
             game machines and comprehensive support services in San Antonio, Texas, and
             surrounding areas.
           </p>
