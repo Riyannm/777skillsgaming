@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Terms of Service for 777 Skills, LLC. Learn about terms of use for our gaming machines and services.",
+  description: "Terms of Service for Vending & Delivery LLC, d/b/a 777 Skills. Learn about terms of use for our gaming machines and services.",
 };
 
 export default function TermsOfServicePage() {
@@ -33,7 +33,7 @@ export default function TermsOfServicePage() {
                 1. Agreement to Terms
               </h2>
               <p>
-                By accessing our website (777skills.com) or entering into an agreement to partner with 777 Skills, LLC (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) for the placement or operation of skill game machines, you agree to be bound by these Terms of Service. If you do not agree to all of these terms, you are prohibited from using the site or our services.
+                By accessing our website (777skills.com) or entering into an agreement to partner with Vending &amp; Delivery LLC, doing business as 777 Skills (&quot;Company,&quot; &quot;777 Skills,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) for the placement or operation of skill game machines, you agree to be bound by these Terms of Service. If you do not agree to all of these terms, you are prohibited from using the site or our services.
               </p>
             </div>
 
@@ -42,7 +42,7 @@ export default function TermsOfServicePage() {
                 2. Licensing and Compliance
               </h2>
               <p>
-                All gaming machines provided by 777 Skills, LLC are operated strictly in accordance with Texas state and local laws governing amusement and skill-based vending devices.
+                All gaming machines provided by the Company are operated strictly in accordance with Texas state and local laws governing amusement and skill-based vending devices.
               </p>
               <ul className="list-disc pl-5 mt-2 space-y-1">
                 <li>Partner establishments must maintain active and valid general business licenses.</li>
@@ -56,7 +56,7 @@ export default function TermsOfServicePage() {
                 3. Partnership &amp; Revenue Sharing
               </h2>
               <p>
-                Specific partnership configurations, revenue-sharing percentages, installation guidelines, and payout structures are defined in detail within the physical written Agreement executed between 777 Skills, LLC and each respective business owner. In the event of a conflict between these online Terms of Service and a signed physical Agreement, the terms of the signed physical Agreement shall govern.
+                Specific partnership configurations, revenue-sharing percentages, installation guidelines, and payout structures are defined in detail within the physical written Agreement executed between the Company and each respective business owner. In the event of a conflict between these online Terms of Service and a signed physical Agreement, the terms of the signed physical Agreement shall govern.
               </p>
             </div>
 
@@ -74,7 +74,7 @@ export default function TermsOfServicePage() {
                 5. Limitation of Liability
               </h2>
               <p>
-                In no event will 777 Skills, LLC or our directors, employees, or agents be liable to you or any third party for any direct, indirect, consequential, exemplary, incidental, special, or punitive damages, including lost profit, lost revenue, loss of data, or other damages arising from your use of the website or our services, even if we have been advised of the possibility of such damages.
+                In no event will the Company or our directors, employees, or agents be liable to you or any third party for any direct, indirect, consequential, exemplary, incidental, special, or punitive damages, including lost profit, lost revenue, loss of data, or other damages arising from your use of the website or our services, even if we have been advised of the possibility of such damages.
               </p>
             </div>
 
@@ -104,7 +104,7 @@ export default function TermsOfServicePage() {
                 To resolve a complaint regarding our services or to receive further information regarding use of the website or machines, please contact us at:
               </p>
               <div className="mt-4 p-4 rounded-xl border border-border bg-muted/20 text-sm">
-                <p className="font-semibold text-foreground">777 Skills, LLC</p>
+                <p className="font-semibold text-foreground">Vending &amp; Delivery LLC (d/b/a 777 Skills)</p>
                 <p>7001 I-10, Suite 229</p>
                 <p>San Antonio, TX 78213</p>
                 <p className="mt-2">

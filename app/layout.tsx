@@ -71,7 +71,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              name: "777 Skills, LLC",
+              name: "777 Skills",
+              legalName: "Vending & Delivery LLC",
+              alternateName: "Vending & Delivery LLC",
               url: "https://777skills.com",
               telephone: "+17267773595",
               email: "info@777skills.com",

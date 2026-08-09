@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for 777 Skills, LLC. Learn how we collect, use, and protect your information.",
+  description: "Privacy Policy for Vending & Delivery LLC, d/b/a 777 Skills. Learn how we collect, use, and protect your information.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -33,7 +33,7 @@ export default function PrivacyPolicyPage() {
                 1. Introduction
               </h2>
               <p>
-                Welcome to 777 Skills, LLC (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We operate the website located at 777skills.com and provide licensed skill game machine services. We are committed to protecting your privacy and ensuring a secure experience when you visit our website or interact with our services.
+                Welcome to Vending &amp; Delivery LLC, doing business as 777 Skills (&quot;777 Skills,&quot; &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We operate the website located at 777skills.com and provide licensed skill game machine services. We are committed to protecting your privacy and ensuring a secure experience when you visit our website or interact with our services.
               </p>
             </div>
 
@@ -123,7 +123,7 @@ export default function PrivacyPolicyPage() {
                 If you have any questions about this Privacy Policy or how we handle your personal data, please contact us at:
               </p>
               <div className="mt-4 p-4 rounded-xl border border-border bg-muted/20 text-sm">
-                <p className="font-semibold text-foreground">777 Skills, LLC</p>
+                <p className="font-semibold text-foreground">Vending &amp; Delivery LLC (d/b/a 777 Skills)</p>
                 <p>7001 I-10, Suite 229</p>
                 <p>San Antonio, TX 78213</p>
                 <p className="mt-2">

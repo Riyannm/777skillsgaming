@@ -142,7 +142,7 @@ export default function Footer() {
       {/* ── Bottom bar ── */}
       <div className="border-t border-border/60">
         <div className="container mx-auto flex flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-muted-foreground sm:flex-row sm:px-6 lg:px-8">
-          <p>© {new Date().getFullYear()} 777 Skills, LLC. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Vending &amp; Delivery LLC, d/b/a 777 Skills. All rights reserved.</p>
           <div className="flex items-center gap-5">
             {legalLinks.map((link) => (
               <Link
