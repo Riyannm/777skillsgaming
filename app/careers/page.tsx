@@ -99,6 +99,15 @@ export default function CareersPage() {
                   Vending &amp; Delivery LLC, d/b/a 777 Skills
                 </p>
                 <p>7001 I-10, Suite 229, San Antonio, TX 78213</p>
+                <p className="mt-2">
+                  Email:{" "}
+                  <a
+                    href="mailto:hr@777skills.com"
+                    className="text-primary hover:underline"
+                  >
+                    hr@777skills.com
+                  </a>
+                </p>
               </div>
             </div>
           </article>
